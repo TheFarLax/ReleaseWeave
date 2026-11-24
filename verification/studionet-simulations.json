@@ -1,0 +1,89 @@
+{
+  "mode": "rpc_simulation",
+  "network": "studionet",
+  "cases": {
+    "MigrationFence": {
+      "address": "0xEB3f4bEB296169a7477358c5b2543e594507e029",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "DependencyExit": {
+      "address": "0x0a73707F01BC927ce4aCAe2C870e8149B67226a6",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "SplitLeakLedger": {
+      "address": "0x90F78F15596A0DC328AA7DddB1d36136c2f22b5d",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "LocaleParity": {
+      "address": "0x2b34Ce43DeE666115736583bBAd47582e3cc9c88",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "ReproQuorum": {
+      "address": "0x6B306006bcD11a91822889C2335E8890B1dA024F",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "RegressionWitness": {
+      "address": "0xE7e29c76B036d4451ec086c8F3A034Afea724725",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "DeprecationPact": {
+      "address": "0x958fbE365365c33d4dE0473Bf50811dD768C90f7",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "BuildOrigin": {
+      "address": "0x8079C47C7fF52A25cA13D64521396B120Cc107E1",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "BatchException": {
+      "address": "0x6B540dc102405Ec1685DfFb097C4a165E110d6A5",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    },
+    "SchemaHandshake": {
+      "address": "0xc2b7461735E26a092a6293ECDFDBA4C6080F3F4a",
+      "method": "open",
+      "return_value": 0,
+      "count_before": 0,
+      "count_after": 0,
+      "status": "PASS"
+    }
+  },
+  "checked_at": "2026-11-23T12:39:31.352Z",
+  "passed": 10,
+  "total": 10
+}

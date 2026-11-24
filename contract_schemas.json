@@ -1,0 +1,989 @@
+{
+  "MigrationFence": {
+    "address": "0xEB3f4bEB296169a7477358c5b2543e594507e029",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "commit": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "proposal_index",
+              "int"
+            ],
+            [
+              "acknowledge_loss",
+              "bool"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "dataset",
+              "string"
+            ],
+            [
+              "current_schema",
+              "string"
+            ],
+            [
+              "safeguard",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "propose": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "target_schema",
+              "string"
+            ],
+            [
+              "migration_plan",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        }
+      }
+    }
+  },
+  "DependencyExit": {
+    "address": "0x0a73707F01BC927ce4aCAe2C870e8149B67226a6",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "dependency",
+              "string"
+            ],
+            [
+              "required_behavior",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "prove_adapter": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "candidate_index",
+              "int"
+            ],
+            [
+              "adapter_design",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "review": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "candidate",
+              "string"
+            ],
+            [
+              "candidate_documentation",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "select": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "candidate_index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        }
+      }
+    }
+  },
+  "SplitLeakLedger": {
+    "address": "0x90F78F15596A0DC328AA7DddB1d36136c2f22b5d",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "add": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "partition",
+              "string"
+            ],
+            [
+              "sample",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "compare": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "first",
+              "int"
+            ],
+            [
+              "second",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "freeze": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "benchmark",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        }
+      }
+    }
+  },
+  "LocaleParity": {
+    "address": "0x2b34Ce43DeE666115736583bBAd47582e3cc9c88",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "notice",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "publish": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "locales_json",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "review": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "locale",
+              "string"
+            ],
+            [
+              "translation",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "revise": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "notice",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        }
+      }
+    }
+  },
+  "ReproQuorum": {
+    "address": "0x6B306006bcD11a91822889C2335E8890B1dA024F",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "confirm": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "version",
+              "string"
+            ],
+            [
+              "environment",
+              "string"
+            ],
+            [
+              "steps_and_expected",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "report": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "tested_version",
+              "string"
+            ],
+            [
+              "environment",
+              "string"
+            ],
+            [
+              "actual_trace",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        }
+      }
+    }
+  },
+  "RegressionWitness": {
+    "address": "0xE7e29c76B036d4451ec086c8F3A034Afea724725",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "evaluate": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "test_source",
+              "string"
+            ],
+            [
+              "before_trace",
+              "string"
+            ],
+            [
+              "after_trace",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "defect",
+              "string"
+            ],
+            [
+              "broken_commit",
+              "string"
+            ],
+            [
+              "fixed_commit",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "seal": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "test_index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        }
+      }
+    }
+  },
+  "DeprecationPact": {
+    "address": "0x958fbE365365c33d4dE0473Bf50811dD768C90f7",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "acknowledge": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "enroll": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "lock_guide": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "migration_guide",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "open": {
+          "params": [
+            [
+              "old_api",
+              "string"
+            ],
+            [
+              "replacement",
+              "string"
+            ],
+            [
+              "announced_minute",
+              "int"
+            ],
+            [
+              "cutoff_minute",
+              "int"
+            ],
+            [
+              "minimum_window",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "retire": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "observed_minute",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        }
+      }
+    }
+  },
+  "BuildOrigin": {
+    "address": "0x8079C47C7fF52A25cA13D64521396B120Cc107E1",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "attest": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "artifact_sha256",
+              "string"
+            ],
+            [
+              "run_evidence",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "source_commit",
+              "string"
+            ],
+            [
+              "recipe",
+              "string"
+            ],
+            [
+              "environment",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "seal": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        }
+      }
+    }
+  },
+  "BatchException": {
+    "address": "0x6B540dc102405Ec1685DfFb097C4a165E110d6A5",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "adjudicate": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "row_number",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "string",
+          "payable": false
+        },
+        "close": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "batch_ref",
+              "string"
+            ],
+            [
+              "total_rows",
+              "int"
+            ],
+            [
+              "failed_rows_json",
+              "string"
+            ],
+            [
+              "reviewer",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "retry": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "row_number",
+              "int"
+            ],
+            [
+              "repaired_row",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        },
+        "submit": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "row_number",
+              "int"
+            ],
+            [
+              "failed_constraint",
+              "string"
+            ],
+            [
+              "repaired_row",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "null",
+          "payable": false
+        }
+      }
+    }
+  },
+  "SchemaHandshake": {
+    "address": "0xc2b7461735E26a092a6293ECDFDBA4C6080F3F4a",
+    "schema": {
+      "ctor": {
+        "params": [],
+        "kwparams": {}
+      },
+      "methods": {
+        "accept": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "offer_index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "agreement_current": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "agreement_index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "bool"
+        },
+        "count": {
+          "params": [],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "int"
+        },
+        "get": {
+          "params": [
+            [
+              "index",
+              "int"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": true,
+          "ret": "string"
+        },
+        "open": {
+          "params": [
+            [
+              "provider_schema",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "propose": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "consumer_expectations",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        },
+        "revise": {
+          "params": [
+            [
+              "index",
+              "int"
+            ],
+            [
+              "expected_revision",
+              "int"
+            ],
+            [
+              "provider_schema",
+              "string"
+            ]
+          ],
+          "kwparams": {},
+          "readonly": false,
+          "ret": "int",
+          "payable": false
+        }
+      }
+    }
+  }
+}

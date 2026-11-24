@@ -1,0 +1,52 @@
+[
+  {
+    "name": "MigrationFence",
+    "file": "contracts/migration_fence.py",
+    "args": []
+  },
+  {
+    "name": "DependencyExit",
+    "file": "contracts/dependency_exit.py",
+    "args": []
+  },
+  {
+    "name": "SplitLeakLedger",
+    "file": "contracts/split_leak_ledger.py",
+    "args": []
+  },
+  {
+    "name": "LocaleParity",
+    "file": "contracts/locale_parity.py",
+    "args": []
+  },
+  {
+    "name": "ReproQuorum",
+    "file": "contracts/repro_quorum.py",
+    "args": []
+  },
+  {
+    "name": "RegressionWitness",
+    "file": "contracts/regression_witness.py",
+    "args": []
+  },
+  {
+    "name": "DeprecationPact",
+    "file": "contracts/deprecation_pact.py",
+    "args": []
+  },
+  {
+    "name": "BuildOrigin",
+    "file": "contracts/build_origin.py",
+    "args": []
+  },
+  {
+    "name": "BatchException",
+    "file": "contracts/batch_exception.py",
+    "args": []
+  },
+  {
+    "name": "SchemaHandshake",
+    "file": "contracts/schema_handshake.py",
+    "args": []
+  }
+]

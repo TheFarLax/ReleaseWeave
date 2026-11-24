@@ -1,0 +1,323 @@
+{
+  "MigrationFence": {
+    "open": [
+      "customers",
+      "id integer, name text",
+      "Preserve all ids"
+    ],
+    "follow_up": [
+      {
+        "method": "propose",
+        "args": [
+          0,
+          1,
+          "id integer, display_name text",
+          "Rename name to display_name and retain a full rollback backup."
+        ]
+      },
+      {
+        "method": "commit",
+        "args": [
+          0,
+          0,
+          false
+        ]
+      }
+    ]
+  },
+  "DependencyExit": {
+    "open": [
+      "http-v1",
+      "get(url) returns Promise<bytes>, errors reject"
+    ],
+    "follow_up": [
+      {
+        "method": "review",
+        "args": [
+          0,
+          "http-v2",
+          "get(url) returns Promise<bytes> and rejects errors."
+        ]
+      },
+      {
+        "method": "select",
+        "args": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "SplitLeakLedger": {
+    "open": [
+      "geography-mini"
+    ],
+    "follow_up": [
+      {
+        "method": "add",
+        "args": [
+          0,
+          "TRAIN",
+          "Name the capital of France."
+        ]
+      },
+      {
+        "method": "add",
+        "args": [
+          0,
+          "TEST",
+          "Name the largest ocean."
+        ]
+      },
+      {
+        "method": "compare",
+        "args": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "method": "freeze",
+        "args": [
+          0
+        ]
+      }
+    ]
+  },
+  "LocaleParity": {
+    "open": [
+      "Use two batteries and disconnect power before opening."
+    ],
+    "follow_up": [
+      {
+        "method": "review",
+        "args": [
+          0,
+          1,
+          "fr",
+          "Utilisez deux piles et coupez le courant avant d'ouvrir."
+        ]
+      },
+      {
+        "method": "publish",
+        "args": [
+          0,
+          1,
+          "[\"fr\"]"
+        ]
+      }
+    ]
+  },
+  "ReproQuorum": {
+    "open": [
+      "commit-a",
+      "Linux Python 3.12",
+      "parse empty input raises IndexError instead of returning an empty list."
+    ],
+    "follow_up": [
+      {
+        "method": "report",
+        "signer": "second wallet",
+        "args": [
+          0,
+          "commit-a",
+          "Linux Python 3.12",
+          "Running parse with empty input raises the same IndexError."
+        ]
+      },
+      {
+        "method": "report",
+        "signer": "third wallet",
+        "args": [
+          0,
+          "commit-a",
+          "Linux Python 3.12",
+          "The stated steps reproduce the same IndexError."
+        ]
+      },
+      {
+        "method": "confirm",
+        "signer": "record creator",
+        "args": [
+          0
+        ]
+      }
+    ]
+  },
+  "RegressionWitness": {
+    "open": [
+      "parse empty input raises IndexError",
+      "commit-a",
+      "commit-b"
+    ],
+    "follow_up": [
+      {
+        "method": "evaluate",
+        "args": [
+          0,
+          "def test_empty(): assert parse('') == []",
+          "commit-a test_empty fails with IndexError in parse('')",
+          "commit-b same test_empty assertion passes"
+        ]
+      },
+      {
+        "method": "seal",
+        "args": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "DeprecationPact": {
+    "open": [
+      "v1 get(id) returns name, 404 for missing",
+      "v2 fetch(id) returns name, 404 for missing",
+      30000000,
+      30010080,
+      10080
+    ],
+    "follow_up": [
+      {
+        "method": "enroll",
+        "signer": "consumer wallet",
+        "args": [
+          0
+        ]
+      },
+      {
+        "method": "lock_guide",
+        "args": [
+          0,
+          "Replace get(id) with fetch(id), same id argument. Response still has name. Missing id still gives 404. No capability is removed."
+        ]
+      },
+      {
+        "method": "acknowledge",
+        "signer": "consumer wallet",
+        "args": [
+          0
+        ]
+      },
+      {
+        "method": "retire",
+        "signer": "record creator",
+        "args": [
+          0,
+          30010080
+        ]
+      }
+    ]
+  },
+  "BuildOrigin": {
+    "open": [
+      "commit-a",
+      "python -m build --wheel",
+      "Linux x86_64, Python 3.12, locked dependencies"
+    ],
+    "follow_up": [
+      {
+        "method": "attest",
+        "signer": "builder A",
+        "args": [
+          0,
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "Built commit-a with python -m build --wheel on Linux x86_64 with Python 3.12 and locked dependencies. SHA-256 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      {
+        "method": "attest",
+        "signer": "builder B",
+        "args": [
+          0,
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "Independently built commit-a with python -m build --wheel on Linux x86_64, Python 3.12, locked dependencies. SHA-256 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      {
+        "method": "seal",
+        "signer": "record creator",
+        "args": [
+          0
+        ]
+      }
+    ]
+  },
+  "BatchException": {
+    "open": [
+      "batch-01",
+      100,
+      "[7,23]",
+      "0x1111111111111111111111111111111111111111"
+    ],
+    "follow_up": [
+      {
+        "method": "submit",
+        "args": [
+          0,
+          7,
+          "Age must be a positive integer",
+          "Age = 20"
+        ]
+      },
+      {
+        "method": "adjudicate",
+        "signer": "assigned reviewer",
+        "args": [
+          0,
+          7
+        ]
+      },
+      {
+        "method": "submit",
+        "signer": "record creator",
+        "args": [
+          0,
+          23,
+          "Name must be nonempty",
+          "Name = Alex"
+        ]
+      },
+      {
+        "method": "adjudicate",
+        "signer": "assigned reviewer",
+        "args": [
+          0,
+          23
+        ]
+      },
+      {
+        "method": "close",
+        "signer": "record creator",
+        "args": [
+          0
+        ]
+      }
+    ]
+  },
+  "SchemaHandshake": {
+    "open": [
+      "JSON response contains id integer and name string. Additional fields permitted. Missing resource is 404."
+    ],
+    "follow_up": [
+      {
+        "method": "propose",
+        "signer": "consumer wallet",
+        "args": [
+          0,
+          1,
+          "Requires id integer and name string. Extra fields permitted. Missing resource is 404."
+        ]
+      },
+      {
+        "method": "accept",
+        "signer": "record creator",
+        "args": [
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}
